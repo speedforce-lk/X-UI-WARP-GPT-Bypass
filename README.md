@@ -10,6 +10,14 @@ But some websites won’t like it if you use an AWS address. Fortunately, they d
 First let’s install it and set it up, in this exact order
 
 ~~~
+curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+~~~
+
+~~~
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ focal main' | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+~~~
+
+~~~
 wget https://github.com/speedforce-demo/X-UI-WARP-GPT-Bypass/raw/main/warp-install && chmod +x warp-install && ./warp-install
 ~~~
 
